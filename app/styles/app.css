@@ -1,0 +1,7 @@
+input {
+  padding: 0.5rem;
+}
+
+input:active, input:focus {
+  background: #DEDEDE;
+}

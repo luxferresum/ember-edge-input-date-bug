@@ -1,5 +1,14 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<button onclick={{action "buildNativeElement"}}>Do it with native DOM manipulation</button>
 
-{{outlet}}
+<div>{{this.val}}</div>
+
+<label>Input generated with ember</label>
+<div>
+  <input type="date" value="2019-01-01" onchange={{action (mut this.val) value="target.value"}}>
+</div>
+
+<label>Input creted with createElement and .setAttribute(...)</label>
+<div id="placeholder-attr"></div>
+
+<label>Input creted with createElement and .value = ...</label>
+<div id="placeholder-prop"></div>
